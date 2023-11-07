@@ -1,9 +1,24 @@
 import '../css/style.css'
 import 'normalize.css'
-import brandBoost from './brand_boost'
-import { brandItems } from './data'
+import { createTtlTxtImgElm, createTestimonialElm, creategalleryElm } from './create_elm'
+import { brandItems, clientTestimonials, galleryItems, services } from './data'
 
 const brandBoostElm = document.getElementById('brand-boost')
-const brandBoostItemTemplate = document.getElementById('brand-boost-item')
+const brandBoostItemTemplate = document.getElementById('brand-boost-item-template')
 
-brandBoost(brandBoostItemTemplate, brandItems, brandBoostElm)
+const servicesElm = document.getElementById('services')
+const serviceTemplate = document.getElementById('service-template')
+
+const testimonialElm = document.getElementById('testimonials-box')
+const testimonialTemplate = document.getElementById('testimonial-template')
+
+const galleryElm = document.getElementById('gallery')
+const galleryTemplate = document.getElementById('gallery-item-template')
+
+// Create brand boost items
+createTtlTxtImgElm(brandBoostItemTemplate, brandItems, brandBoostElm)
+
+// Create Services items
+createTtlTxtImgElm(serviceTemplate, services, servicesElm)
+createTestimonialElm(testimonialTemplate, clientTestimonials, testimonialElm)
+creategalleryElm(galleryTemplate, galleryItems, galleryElm)
