@@ -28,11 +28,14 @@
 
   /*  */
   --bgc-01: #242424;
+  --bgc-02: hsl(51, 100%, 49%);
+  --bgc-03: hsl(162, 35%, 62%);
   --clr-01: rgb(204, 224, 240);
   --clr-02: rgb(201, 224, 243);
+  --clr-03: rgb(106, 108, 109);
+  --clr-04: rgba(216, 240, 252, 0.74);
+  --clr-06: #2c7566;
   --pd-hdr: 1.5rem;
-  --bgc-02: hsl(51, 100%, 49%);
-
 }
 
 /* Global */
@@ -57,6 +60,10 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+ul {
+  padding: 0;
 }
 
 /* light theme */
@@ -105,7 +112,7 @@ a {
   list-style: none;
 }
 
-.menu--header {
+.menu {
   display: flex;
 }
 
@@ -123,7 +130,8 @@ h1,
 h2,
 h3,
 .menu__link--contact,
-.brand-boost__button {
+.brand-boost__button,
+.testimonial__author {
   font-family: 'fraunces';
 }
 
@@ -202,29 +210,119 @@ h3,
 
 .service__title {
   font-weight: 900;
+  font-size: 1.75em;
 }
 
 .service__text {
   line-height: 1.5rem;
+  
 }
 
 .service__info--blue {
   color: rgba(6, 12, 24, 0.712);
 }
 
-.socialIcon {
-  width: 3rem;
+.testimonials {
+  flex-direction: column;
+  padding: 3rem 2rem 6rem;
+  text-align: center;
 }
 
-.socialIcon svg {
- width: 3rem;
+.testimonial__title {
+  margin-bottom: 5rem;
+  letter-spacing: .3rem;
+  font-size: .9em;
+  color: var(--clr-03);
+}
+
+.testimonials__box {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.testimonial {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial__avatar {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.testimonial__text {
+line-height: 1.75rem;
+}
+
+.testimonial__person {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  align-items: center;
+}
+
+.testimonial__author {
+  color: var(--clr-02);
+}
+
+.testimonial__position {
+  font-size: .9em;
+  color: var(--clr-04);
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery__image-box {
+  font-size: 0;
+  flex-basis: 50%;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery__img {
+  width: 100%;
+}
+
+.footer {
+  text-align: center;
+  padding: 4rem 2.5rem 5rem;
+  background-color: var(--bgc-03);
+  color: var(--clr-06);
+}
+
+.logo--footer {
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.logo--footer img {
+  width: 11rem;
+}
+
+.menu--footer {
+  justify-content: space-between;
+  margin-bottom: 6rem;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 11rem;
+  margin-inline: auto;
+  font-size: 0;
 }
 
 /* only mobile */
 
 @media(width < 1100px ) {
   .nav--header {
-    display: none;
+    /* display: none; */
     position: absolute;
     top: 6.5rem;
     width: calc(100% - (var(--pd-hdr) * 2));
