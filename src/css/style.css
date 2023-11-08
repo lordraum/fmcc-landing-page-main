@@ -13,11 +13,11 @@
   --bgc-01: hsl(212, 27%, 19%);
   --bgc-02: hsl(51, 100%, 49%);
   --bgc-03: hsl(162, 35%, 62%);
-  --bgc-04: 
+  --bgc-04: rgb(200, 210, 214);
   --clr-01: rgb(204, 224, 240);
   --clr-02: rgb(140, 195, 240);
   --clr-03: rgb(106, 108, 109);
-  --clr-04: rgba(3, 13, 19, 0.74);
+  --clr-04: rgba(220, 234, 241, 0.74);
   --clr-06: #2c7566;
   --clr-07: #242424;
   --pd-hdr: 1.5rem;
@@ -187,23 +187,23 @@ h3,
   opacity: 0.7;
 }
 
-.brand-boost__item:first-of-type .brand-boost__button::after{
+.brand-boost__item:first-of-type .brand-boost__button::after {
   background-color: rgb(240, 240, 156);
 }
 
-.brand-boost__item:first-of-type .brand-boost__button:hover::after{
+.brand-boost__item:first-of-type .brand-boost__button:hover::after {
   background-color: red;
 }
 
-.brand-boost__item:last-of-type .brand-boost__button::after{
+.brand-boost__item:last-of-type .brand-boost__button::after {
   background-color: rgb(236, 198, 224);
 }
 
-.brand-boost__item:first-of-type .brand-boost__button:hover::after{
+.brand-boost__item:first-of-type .brand-boost__button:hover::after {
   background-color: rgb(238, 238, 49);
 }
 
-.brand-boost__item:last-of-type .brand-boost__button:hover::after{
+.brand-boost__item:last-of-type .brand-boost__button:hover::after {
   background-color: rgb(221, 136, 164);
 }
 
